@@ -1,9 +1,20 @@
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import { AuthContext } from "../Provider/AuthProvider";
 
 
 const Header = () => {
+    const {user,logout}=useContext(AuthContext)
+    const handleLogout=()=>{
+        logout()
+        .then()
+        .catch()
+
+    }
     const nav = <>
         <li><NavLink to={"/"} >Home</NavLink> </li>
+        <li><NavLink to={"/about"} >About Us</NavLink> </li>
+        <li><NavLink to={"/contact"} >Contact</NavLink> </li>
         <li><NavLink to={"/add-product"}>Add Product</NavLink> </li>
         <li><NavLink to={"/cart"}>Carts</NavLink> </li>
     </>
@@ -20,7 +31,7 @@ const Header = () => {
                         }
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+                <a className="btn btn-ghost normal-case text-xl">CarMall</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -30,8 +41,16 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end gap-3">
-                <a to={"/login"} className="btn">Login</a>
-                <a to={"/register"} className="btn">Register</a>
+               {
+                user?
+                <button onClick={handleLogout} className="btn">LogOut</button>
+                :
+                <div>
+                    <button><NavLink to={"/login"} className="btn">Login</NavLink></button>
+                <button><NavLink to={"/signup"} className="btn">Register</NavLink></button>
+                </div>
+
+               }
             </div>
         </div>
     );

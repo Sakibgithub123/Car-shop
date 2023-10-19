@@ -13,14 +13,14 @@ const AllProduct = ({ car }) => {
                 </h2>
                 <p>{short_description}</p>
                 <div className="card-actions justify-start">
-                    <div className="badge badge-outline">{price}</div>
-                    <div className="badge badge-outline">{brand_name}</div>
-                    <div className="badge badge-outline">{rating}</div>
+                    <div className="badge badge-outline py-3 px-4 font-medium bg-orange-400 text-accent-conten">{price}</div>
+                    <div className="badge badge-outline py-3 px-4 font-medium bg-orange-400 text-accent-conten ">{brand_name}</div>
+                    <div className="badge badge-outline py-3 px-4 font-medium bg-orange-400 text-accent-conten">{rating}</div>
                 </div>
                 <div className="card-actions justify-end">
-                    <div className="badge badge-outline">
+                    <div className="">
                        
-                       <Link to={`/productDetails/${_id}`}><button>Details</button></Link>
+                       <Link to={`/productDetails/${_id}`}><button className="btn btn-active btn-primary">Show Details</button></Link>
                     </div>
              
                 </div>
