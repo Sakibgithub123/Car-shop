@@ -24,6 +24,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element:<Root></Root>,
+    loader:()=>fetch('http://localhost:5000/addproducts'),
     errorElement:<ErrorPage></ErrorPage>,
         children:[
       {
@@ -59,13 +60,13 @@ const router = createBrowserRouter([
       {
         path:"/brand/:brand_name",
         element:<BrandProduct></BrandProduct>,
-        // loader:({params})=>fetch(`http://localhost:5000/addproducts/${params.brand_name}`)
+        loader:({params})=>fetch(`http://localhost:5000/addproducts/${params.brand_name}`)
 
       },
       {
         path:"/cart",
         element:<PrivateRoute><Cart></Cart></PrivateRoute>,
-        loader:()=>fetch('http://localhost:5000/addcarts')
+        loader:()=>fetch('http://localhost:5000/addproducts')
       },
       {
         path:"/signup",

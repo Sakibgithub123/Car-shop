@@ -7,6 +7,7 @@ import img6 from "../../assets/mecedes.jpg"
 import { Link } from "react-router-dom"
 
 const BrandSection = () => {
+  // const {brand_name}=car;
     
 
     return (
@@ -15,7 +16,7 @@ const BrandSection = () => {
 
          <div className="avatar flex flex-row justify-between bg-slate-400 p-5 rounded">
         <div  className="w-24 rounded-full">
-          <Link ><img src={img1} /></Link>
+          {/* <Link to={`/brand/${brand_name}`} ><img src={img1} /></Link> */}
         </div>
         <div className="w-24 rounded-full">
           <img src={img2} />

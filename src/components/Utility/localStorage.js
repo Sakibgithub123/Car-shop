@@ -1,17 +1,20 @@
-const getStoredCart=()=>{
-    const storedCartString=localStorage.getItem('cart');
-    if(storedCartString){
-        return JSON.parse(storedCartString)
+
+
+const getCartData=()=>{
+    const storedDonation=localStorage.getItem('cart');
+    if(storedDonation){
+        return JSON.parse(storedDonation)
     }
-    return [];
+    return []
 }
-const saveCart=cart=>{
-    const cartStringified=JSON.stringify(cart);
-    localStorage.setItem('cart',cartStringified)
+
+const saveCartData=id=>{
+    const storedDonation=getCartData()
+    const exists=storedDonation.find(donateId=> donateId === id)
+    if(!exists){
+        storedDonation.push(id)
+        localStorage.setItem('cart', JSON.stringify(storedDonation))
+    }
 }
-const addToLS=id=>{
-    const cart =getStoredCart();
-    cart.push(id)
-    saveCart(cart)
-}
-export {addToLS ,getStoredCart}
+
+export {getCartData,saveCartData}

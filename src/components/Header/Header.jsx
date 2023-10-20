@@ -4,7 +4,7 @@ import { AuthContext } from "../Provider/AuthProvider";
 
 
 
-const Header = () => {
+const Header = ({cart}) => {
     const { user, logout } = useContext(AuthContext)
     const handleLogout = () => {
         logout()
@@ -21,7 +21,7 @@ const Header = () => {
             user ? <li><NavLink to={"/add-product"}>Add Product</NavLink> </li> : ''
         }
         {
-            user ? <li><NavLink to={"/cart"}>Carts</NavLink> </li> : ''
+            user ? <li><NavLink to={"/cart"}>Carts <sup className="badge badge-secondary">{cart.length}</sup> </NavLink> </li> : ''
         }
     </>
     return (
