@@ -18,6 +18,7 @@ import AuthProvider from './components/Provider/AuthProvider';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Aboutus from './components/Aboutus/Aboutus';
 import Contactus from './components/Contactus/Contactus';
+import BrandProduct from './components/BrandProduct/BrandProduct';
 
 const router = createBrowserRouter([
   {
@@ -54,6 +55,12 @@ const router = createBrowserRouter([
         path:"/productDetails/:id",
         element:<PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
         loader:({params})=>fetch(`http://localhost:5000/addproducts/${params.id}`)
+      },
+      {
+        path:"/brand/:brand_name",
+        element:<BrandProduct></BrandProduct>,
+        loader:({params})=>fetch(`http://localhost:5000/addproducts/${params.brand_name}`)
+
       },
       {
         path:"/cart",
