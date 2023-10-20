@@ -41,25 +41,25 @@ const AddProducts = () => {
                     <div className="text-center  my-3">
                         <h1 className="text-5xl font-bold">Add Products</h1>
                     </div>
-                    <div className="card  w-full max-w-3xl shadow-2xl bg-base-100">
+                    <div className="card  w-full max-w-3xl shadow-2xl bg-neutral-focus">
                         <form onSubmit={handleAddProduct} className="card-body w-full ">
-                            <div className="flex flex-row justify-between">
+                            <div className="flex flex-row justify-between ">
                                 <div className="w-5/12">
                                     <div className="form-control">
                                         <label className="label">
-                                            <span className="label-text">Name</span>
+                                            <span className="label-text text-[#fff]">Name</span>
                                         </label>
-                                        <input type="text" name="name" placeholder="Enter name here.." className="input input-bordered" required />
+                                        <input type="text" name="name" placeholder="Enter name here.." className="input input-bordered text-[#e95959]" required />
                                     </div>
                                     <div className="form-control">
                                         <label className="label">
-                                            <span className="label-text">Brand Name</span>
+                                            <span className="label-text text-[#fff]">Brand Name</span>
                                         </label>
-                                        <input type="text" name="brand_name" placeholder="Enter brand name here.." className="input input-bordered" required />
+                                        <input type="text" name="brand_name" placeholder="Enter brand name here.." className="input input-bordered text-[#fff]" required />
                                     </div>
                                     <div className="form-control">
                                         <label className="label">
-                                            <span className="label-text">Price</span>
+                                            <span className="label-text text-[#fff]">Price</span>
                                         </label>
                                         <input type="text" name="price" placeholder="Enter price here.." className="input input-bordered" required />
 
@@ -68,19 +68,19 @@ const AddProducts = () => {
                                 <div className="w-5/12" >
                                     <div className="form-control">
                                         <label className="label">
-                                            <span className="label-text">Short description</span>
+                                            <span className="label-text text-[#fff]">Short description</span>
                                         </label>
                                         <textarea name="short_description" className="input input-bordered" placeholder="Enter short description here.." id="" cols="30" rows="30"></textarea>
                                     </div>
                                     <div className="form-control">
                                         <label className="label">
-                                            <span className="label-text">Rating</span>
+                                            <span className="label-text text-[#fff]">Rating</span>
                                         </label>
                                         <input type="text" name="rating" placeholder="Enter rating here.." className="input input-bordered" required />
                                     </div>
                                     <div className="form-control">
                                         <label className="label">
-                                            <span className="label-text">Image</span>
+                                            <span className="label-text text-[#fff]">Image</span>
                                         </label>
                                         <input type="text" name="image" placeholder="Enter image url here.." className="input input-bordered" required />
                                     </div>
@@ -88,7 +88,7 @@ const AddProducts = () => {
 
                             </div>
                             <div className="form-control mt-6">
-                                <button type="submit" className="btn btn-primary">Add Car</button>
+                            <button type="submit" className="border border-slate-500 py-2 px-6 text-[#fff] font-semibold text-base">Add Product</button>
                             </div>
                         </form>
                     </div>
@@ -96,13 +96,13 @@ const AddProducts = () => {
             </div>
             {/* loaderdata */}
             <div className="max-w-4xl mx-auto">
-                <h1 className="text-2xl text-center py-3">Brand new cars total : {loaderCars.length}</h1>
+                <h1 className="text-3xl font-semibold text-center py-3">Brand new total cars  : {loaderCars.length}</h1>
 
                 <div className="overflow-x-auto">
-                    <table className="table">
+                    <table className="table bg-neutral-focus ">
                         {/* head */}
-                        <thead>
-                            <tr className=" text-xl">
+                        <thead className="">
+                            <tr className="text-xl text-[#fff]">
                                 <th >Image</th>
                                 <th>Name</th>
                                 <th>Brand Name</th>

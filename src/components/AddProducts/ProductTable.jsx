@@ -20,7 +20,7 @@ const ProductTable = ({car,cars,setcar}) => {
 
     }
     return (
-         <tbody>
+         <tbody className="text-[#fff]">
                      {/* row 1 */}
                      <tr>
                        
