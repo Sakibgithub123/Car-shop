@@ -39,7 +39,7 @@ const AddProducts = () => {
             <div className=" min-h-screen bg-base-200">
                 <div className="hero-content flex-row lg:flex-col">
                     <div className="text-center  my-3">
-                        <h1 className="text-5xl font-bold">Add Products</h1>
+                        <h1 className="text-5xl font-bold italic">Add Products</h1>
                     </div>
                     <div className="card  w-full max-w-3xl shadow-2xl bg-neutral-focus">
                         <form onSubmit={handleAddProduct} className="card-body w-full ">
@@ -96,7 +96,7 @@ const AddProducts = () => {
             </div>
             {/* loaderdata */}
             <div className="max-w-4xl mx-auto">
-                <h1 className="text-3xl font-semibold text-center py-3">Brand new total cars  : {loaderCars.length}</h1>
+                <h1 className="text-3xl font-semibold text-center py-3 italic">Brand new total cars  : {loaderCars.length}</h1>
 
                 <div className="overflow-x-auto">
                     <table className="table bg-neutral-focus ">

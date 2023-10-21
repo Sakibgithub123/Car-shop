@@ -1,10 +1,11 @@
 import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
+import logo from "../../assets/carlogo.png"
 
 
 
-const Header = ({cart}) => {
+const Header = ({ cart }) => {
     const { user, logout } = useContext(AuthContext)
     const handleLogout = () => {
         logout()
@@ -37,10 +38,17 @@ const Header = ({cart}) => {
                         }
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">CarMall</a>
+                <a className="btn btn-ghost normal-case text-xl flex flex-col gap-3">
+                    <div className="w-20 rounded-full ">
+                        <img src={logo} />
+                    </div>
+                    <div>
+                        <p className="text-3xl font-semibold">carCity</p>
+                    </div>
+                </a>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1 text-[#f15d5d]">
+                <ul className="menu menu-horizontal px-1 text-[#f15d5d] text-2xl font-semibold">
                     {
                         nav
                     }
@@ -50,21 +58,21 @@ const Header = ({cart}) => {
 
                 {
                     user ?
-                    <div className="flex flex-col md:flex-row gap-4">
-                    {user?.photoURL?
-                    <div className="avatar ">
-                    <div className="w-8 md:w-14 rounded-full">
-                    <img src={user.photoURL} />
-                      
-                    </div>
-                  </div>
-                     
-                      :''}
-                    
-                    <div> {user?.displayName? <p  className="bg-[#fff] text-sm text-[#2d3e50] py-2 px-3  border rounded font-medium ">{user.displayName}</p>  : ''}</div>
-                    <button onClick={handleLogout} className="btn">LogOut</button>
-                  </div>
-                        
+                        <div className="flex flex-col md:flex-row gap-4">
+                            {user?.photoURL ?
+                                <div className="avatar ">
+                                    <div className="w-8 md:w-14 rounded-full">
+                                        <img src={user.photoURL} />
+
+                                    </div>
+                                </div>
+
+                                : ''}
+
+                            <div> {user?.displayName ? <p className="bg-[#fff] text-sm text-[#2d3e50] py-2 px-3  border rounded font-medium ">{user.displayName}</p> : ''}</div>
+                            <button onClick={handleLogout} className="btn">LogOut</button>
+                        </div>
+
                         :
                         <div>
                             <button><NavLink to={"/login"} className="btn">Login</NavLink></button>

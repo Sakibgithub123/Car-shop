@@ -12,11 +12,11 @@ const BrandSection = () => {
 
     return (
        <div>
-         <h1 className="text-5xl font-bold my-5 text-center">Our Brands</h1>
+         <h1 className="text-5xl font-bold my-10 text-center italic">Our Brands</h1>
 
          <div className="avatar flex flex-row justify-between bg-slate-400 p-5 rounded">
         <div  className="w-24 rounded-full">
-          {/* <Link to={`/brand/${brand_name}`} ><img src={img1} /></Link> */}
+          <img src={img1} />
         </div>
         <div className="w-24 rounded-full">
           <img src={img2} />

@@ -7,12 +7,12 @@ const AllProduct = ({ car }) => {
    
     const handleAddCart = (car) => {
         saveCartData(car._id)
-        alert("You have donate successfully!")
+        alert("cart addedsuccessfully!")
     }
    
     return (
 
-        <div className="card  bg-base-100 shadow-xl">
+        <div className="card  bg-slate-200 shadow-xl">
             <figure><img src={image} alt="Shoes" /></figure>
             <div className="card-body">
                 <h2 className="card-title">
@@ -20,18 +20,18 @@ const AllProduct = ({ car }) => {
                     <div className="badge badge-secondary">{brand_name}</div>
                 </h2>
                 {/* <div className="badge badge-outline py-5 px-7  font-medium text-xl  text-accent-conten ">{brand_name}</div> */}
-                <p>{short_description}</p>
-                <div className="card-actions justify-center ">
-                    <div className="  font-medium text-xl  text-accent-conten"> Price : {price}</div>
-                    <div className="font-medium text-xl   text-accent-conten">Rating : {rating}k</div>
+                <p className="text-neutral-focus">{short_description}</p>
+                <div className="flex  md:flex-row justify-between gap-10 ">
+                    <div className="  font-medium text-xl  text-neutral-focus"> Price : <span className="text-secondary">{price}</span></div>
+                    <div className="font-medium text-xl   text-neutral-focus">Rating : <span className="text-secondary">{rating}k</span></div>
                 </div>
                 <div className="card-actions ">
-                    <div className=" flex flex-col md:flex-row justify-between gap-10">
+                    <div className=" flex flex-row justify-between gap-10">
                         <div>
-                            <button type="submit" onClick={() => handleAddCart(car)} className="btn btn-active text-[#fff] bg-neutral-focus">Add Cart</button>
+                            <button type="submit" onClick={() => handleAddCart(car)} className="btn btn-active text-[#fff] bg-[#f15d5d]">Add Cart</button>
                         </div>
                         <div>
-                            <Link to={`/productDetails/${_id}`}><button className="btn btn-active text-[#fff] bg-neutral-focus">Show Details</button></Link>
+                            <Link to={`/productDetails/${_id}`}><button className="btn btn-active text-[#fff] bg-[#f15d5d]">Show Details</button></Link>
                         </div>
                     </div>
 

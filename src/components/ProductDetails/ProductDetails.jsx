@@ -11,17 +11,23 @@ const ProductDetails = () => {
                    {singleCarDetails.name}
                    
                 </h2>
-                <p>{singleCarDetails.short_description}</p>
+                <p className="text-xl">{singleCarDetails.short_description}</p>
                 <div className="card-actions justify-start">
-                    <div className="badge badge-outline">{singleCarDetails.price}</div>
-                    <div className="badge badge-outline">{singleCarDetails.brand_name}</div>
-                    <div className="badge badge-outline">{singleCarDetails.rating}</div>
+                    <div className="badge badge-outline badge-secondary">{singleCarDetails.price}</div>
+                    <div className="badge badge-outline badge-secondary">{singleCarDetails.brand_name}</div>
+                    <div className="badge badge-outline badge-secondary">*{singleCarDetails.rating}k</div>
                 </div>
                 <div>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                <p className="text-base text-neutral-focus">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                  Voluptas placeat illum doloremque est, saepe delectus, 
                  sapiente nesciunt eligendi, veniam quasi atque mollitia
-                  dicta iure fugiat enim molestias id non recusandae!</p>
+                  dicta iure fugiat enim molestias id non recusandae! 
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                  Dolores ducimus vel alias exercitationem ea fuga cum, a non eos,
+                   eaque possimus explicabo delectus soluta deserunt quam? 
+                   Quos cum explicabo enim eum dolores repellendus commodi 
+                   fugit maxime. Ad, architecto! Ut voluptatibus autem sit 
+                   architecto natus obcaecati culpa perferendis iste cupiditate ipsa?</p>
                 </div>
 
             </div>
