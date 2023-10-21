@@ -40,7 +40,7 @@ const ProductTable = ({car,cars,setcar}) => {
 
     }
     return (
-         <tbody className="text-[#fff]">
+         <tbody className="text-[#fff] font-lato">
                      {/* row 1 */}
                      <tr>
                        

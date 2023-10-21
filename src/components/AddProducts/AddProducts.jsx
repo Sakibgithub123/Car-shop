@@ -46,7 +46,7 @@ const AddProducts = () => {
     return (
 
         <div>
-            <div className=" min-h-screen bg-base-200">
+            <div className=" min-h-screen bg-base-200 font-lato">
                 <div className="hero-content flex-row lg:flex-col">
                     <div className="text-center  my-3">
                         <h1 className="text-5xl font-bold italic">Add Products</h1>

@@ -2,7 +2,7 @@
 import img from "../../assets/m1.jpg"
 const Aboutus = () => {
     return (
-        <div className="hero min-h-screen bg-neutral-focus font-montserrat">
+        <div className="hero min-h-screen bg-neutral-focus font-lato">
         <div className="hero-content flex-col lg:flex-row-reverse gap-20">
           <div className="text-center lg:text-left ">
             <h1 className="text-5xl font-bold text-[#f15d5d] italic pb-4">About Us!</h1>

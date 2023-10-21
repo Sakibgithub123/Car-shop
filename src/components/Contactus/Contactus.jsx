@@ -3,10 +3,7 @@
 const Contactus = () => {
     return (
 
-        <div className="hero min-h-screen  bg-base-200 font-montserrat">
-           
-                
-
+        <div className="hero min-h-screen  bg-base-200 font-lato">
                 <div className="hero-content w-full flex-row lg:flex-col">
                 <div className="text-center  my-3">
                     <h1 className="text-5xl font-bold italic">Contact Us</h1>

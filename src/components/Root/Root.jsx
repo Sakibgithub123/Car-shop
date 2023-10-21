@@ -19,7 +19,7 @@ const Root = () => {
     return (
         <div>
             <Header cart={cart}></Header>
-           <div className="max-w-6xl mx-auto my-6">
+           <div className="max-w-6xl mx-auto my-6 font-lato">
            <Outlet></Outlet>
            </div>
             <Footer></Footer>

@@ -2,7 +2,7 @@
 
 const Footer = () => {
     return (
-        <div className="p-10 bg-neutral-focus text-[#fff]">
+        <div className="p-10 bg-neutral-focus text-[#fff] font-lato">
            <footer className="footer max-w-6xl mx-auto ">
            <nav>
                 <header className="footer-title text-xl">Services</header>
