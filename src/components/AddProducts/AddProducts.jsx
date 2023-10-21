@@ -1,6 +1,10 @@
 import { useLoaderData } from "react-router-dom";
 import ProductTable from "./ProductTable";
 import { useState } from "react";
+import Swal from 'sweetalert2'
+
+// CommonJS
+
 
 
 const AddProducts = () => {
@@ -29,7 +33,13 @@ const AddProducts = () => {
             .then(data => {
                 console.log(data);
                 if(data.insertedId){
-                    alert('update')
+                    Swal.fire({
+                        position: 'center',
+                        icon: 'success',
+                        title: 'Product Added Successfully!',
+                        showConfirmButton: false,
+                        timer: 1500
+                      })
                 }
             })
     }

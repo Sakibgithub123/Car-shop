@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
+import Swal from 'sweetalert2'
 
 
 const Signup = () => {
@@ -48,6 +49,13 @@ const Signup = () => {
 
             .then((result) => {
                 console.log(result.user)
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Sign Up Successfully!',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
             })
             .catch((error) => {
                 console.error(error)

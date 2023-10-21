@@ -3,6 +3,7 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import { useEffect, useState } from "react";
 import { getCartData } from "../Utility/localStorage";
+// ES6 Modules or TypeScript
 
 
 const Root = () => {

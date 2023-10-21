@@ -70,13 +70,13 @@ const Header = ({ cart }) => {
                                 : ''}
 
                             <div> {user?.displayName ? <p className="bg-[#fff] text-sm text-[#2d3e50] py-2 px-3  border rounded font-medium ">{user.displayName}</p> : ''}</div>
-                            <button onClick={handleLogout} className="btn">LogOut</button>
+                            <button onClick={handleLogout} className="btn text-[#f15d5d]">LogOut</button>
                         </div>
 
                         :
                         <div>
-                            <button><NavLink to={"/login"} className="btn">Login</NavLink></button>
-                            <button><NavLink to={"/signup"} className="btn">Register</NavLink></button>
+                            <button><NavLink to={"/login"} className="btn text-[#f15d5d]">Login</NavLink></button>
+                            <button><NavLink to={"/signup"} className="btn text-[#f15d5d]">Register</NavLink></button>
                         </div>
 
                 }

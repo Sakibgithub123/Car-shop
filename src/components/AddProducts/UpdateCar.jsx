@@ -1,4 +1,5 @@
 import { useLoaderData } from "react-router-dom";
+import Swal from 'sweetalert2'
 
 
 const UpdateCar = () => {
@@ -28,7 +29,13 @@ const UpdateCar = () => {
             .then(data => {
                 console.log(data);
                 if(data.modifiedCount > 0){
-                    alert('update')
+                    Swal.fire({
+                        position: 'center',
+                        icon: 'success',
+                        title: 'Product Updated Successfully!',
+                        showConfirmButton: false,
+                        timer: 1500
+                      })
                 }
             })
     }
@@ -36,27 +43,27 @@ const UpdateCar = () => {
         <div className=" min-h-screen bg-base-200">
             <div className="hero-content flex-row lg:flex-col">
                 <div className="text-center  my-3">
-                    <h1 className="text-5xl font-bold">Update Products</h1>
+                    <h1 className="text-5xl font-bold italic">Update Products</h1>
                 </div>
-                <div className="card  w-full max-w-3xl shadow-2xl bg-base-100">
+                <div className="card  w-full max-w-3xl shadow-2xl bg-neutral-focus">
                     <form onSubmit={handleUpdateProduct}  className="card-body w-full ">
                         <div className="flex flex-row justify-between">
                         <div className="w-5/12">
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Name</span>
+                                <span className="label-text text-[#fff]">Name</span>
                             </label>
                             <input type="text" defaultValue={name} name="name"   className="input input-bordered"  required />
                         </div>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Brand Name</span>
+                                <span className="label-text text-[#fff]">Brand Name</span>
                             </label>
                             <input type="text" name="brand_name" defaultValue={brand_name} placeholder="Enter brand name here.." className="input input-bordered" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Price</span>
+                                <span className="label-text text-[#fff]">Price</span>
                             </label>
                             <input type="text" name="price" defaultValue={price} placeholder="Enter price here.." className="input input-bordered" required />
                            
@@ -65,19 +72,19 @@ const UpdateCar = () => {
                        <div className="w-5/12" >
                        <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Short description</span>
+                                <span className="label-text text-[#fff]">Short description</span>
                             </label>
-                            <textarea name="short_description" defaultValue={short_description} className="input input-bordered" placeholder="Enter short description here.." id="" cols="30" rows="30"></textarea> 
+                            <textarea name="short_description" defaultValue={short_description} className="input input-bordered" placeholder="Enter short description here.." id="" cols="50" rows="50"></textarea> 
                         </div>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Rating</span>
+                                <span className="label-text text-[#fff]">Rating</span>
                             </label>
                             <input type="text" name="rating" defaultValue={rating} placeholder="Enter rating here.." className="input input-bordered" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Image</span>
+                                <span className="label-text text-[#fff]">Image</span>
                             </label>
                             <input type="text" name="image" defaultValue={image} placeholder="Enter image url here.." className="input input-bordered" required />
                         </div>
@@ -85,7 +92,7 @@ const UpdateCar = () => {
 
                         </div>
                         <div className="form-control mt-6">
-                            <button type="submit" className="btn btn-primary">Update Car</button>
+                        <button type="submit" className="border border-slate-500 py-2 px-6 text-[#fff] font-semibold text-base">Update Product</button>
                         </div>
                     </form>
                 </div>
