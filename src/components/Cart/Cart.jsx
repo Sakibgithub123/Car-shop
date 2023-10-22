@@ -1,12 +1,12 @@
 import { useLoaderData } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { getCartData } from "../Utility/localStorage";
+import {  getCartData } from "../Utility/localStorage";
+// import Swal from 'sweetalert2'
 
 
 const Cart = () => {
     const car = useLoaderData()
     const [cart, setCart] = useState([])
-    // const [dataLength, setDtaLength] = useState(4)
     useEffect(() => {
         const storedCartId = getCartData()
         if (car.length > 0) {
@@ -36,6 +36,7 @@ const Cart = () => {
                                 <div className="card-actions ">
                                     <div className=" flex flex-col md:flex-row justify-between gap-10">
                                         <div>
+                                           
                                         </div>
                                     </div>
                                 </div>

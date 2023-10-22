@@ -21,7 +21,7 @@ const AddProducts = () => {
         const image = form.image.value;
         const product = { name, brand_name, price, short_description, rating, image }
         console.log(product)
-        fetch('http://localhost:5000/addproducts', {
+        fetch('https://carshop-backend-50iy1pji1-sakibs-projects-47142987.vercel.app/addproducts', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

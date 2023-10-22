@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import Swal from 'sweetalert2'
+import { Link } from "react-router-dom";
 
 
 const Signup = () => {
@@ -70,13 +71,13 @@ const Signup = () => {
                 <div className="text-center  my-3">
                     <h1 className="text-5xl font-bold">Sign Up PAge</h1>
                 </div>
-                <div className="card  w-full max-w-3xl shadow-2xl bg-base-100">
+                <div className="card  w-full max-w-3xl shadow-2xl bg-neutral-focus">
                     <form onSubmit={handleSignup} className="card-body w-full ">
                         <div className="flex flex-row justify-between">
-                            <div className="w-5/12">
+                            <div className="w-full">
                                 <div className="form-control">
                                     <label className="label">
-                                        <span className="label-text">Name</span>
+                                        <span className="label-text text-[#fff]">Name</span>
                                     </label>
                                     <input type="text" name="name" placeholder="Enter name here.." className="input input-bordered"  />
                                 </div>
@@ -85,7 +86,7 @@ const Signup = () => {
                                 }
                                 <div className="form-control">
                                     <label className="label">
-                                        <span className="label-text">Email</span>
+                                        <span className="label-text text-[#fff]">Email</span>
                                     </label>
                                     <input type="email" name="email" placeholder="Enter email here.." className="input input-bordered"  />
                                 </div>
@@ -95,7 +96,7 @@ const Signup = () => {
 
                                 <div className="form-control">
                                     <label className="label">
-                                        <span className="label-text">Password</span>
+                                        <span className="label-text text-[#fff]">Password</span>
                                     </label>
                                     <input type="password" name="password" placeholder="Enter password here.." className="input input-bordered"  />
 
@@ -107,7 +108,11 @@ const Signup = () => {
 
                         </div>
                         <div className="form-control mt-6">
-                            <button type="submit" className="btn btn-primary">Add Car</button>
+                            
+                            <button type="submit" className="border border-slate-500 py-2 px-6 text-[#fff] font-semibold text-base">Sign Up</button>
+                           <div className="text-center my-3">
+                           <Link to={'/login'}><span className="text-[#fff]">Do you have account?</span><button type="submit" className=" py-2 px-6 text-[#fff] font-semibold text-base underline">Login Now</button></Link>
+                           </div>
                         </div>
                     </form>
                 </div>

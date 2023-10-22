@@ -17,7 +17,7 @@ const UpdateCar = () => {
         const image = form.image.value;
         const product = { name, brand_name, price, short_description, rating, image }
         console.log(product)
-        fetch(`http://localhost:5000/addproducts/${_id}`, {
+        fetch(`https://carshop-backend-50iy1pji1-sakibs-projects-47142987.vercel.app/addproducts/${_id}`, {
             method: 'Put',
             headers: {
                 'content-type': 'application/json'
@@ -40,7 +40,7 @@ const UpdateCar = () => {
             })
     }
     return (
-        <div className=" min-h-screen bg-base-200">
+        <div className=" min-h-screen bg-base-200 font-lato">
             <div className="hero-content flex-row lg:flex-col">
                 <div className="text-center  my-3">
                     <h1 className="text-5xl font-bold italic">Update Products</h1>

@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from 'sweetalert2'
 
 const Login = () => {
@@ -65,27 +65,30 @@ const Login = () => {
                 <div className="text-center  my-3">
                     <h1 className="text-5xl font-bold">Login Page</h1>
                 </div>
-                <div className="card  w-full max-w-3xl shadow-2xl bg-base-100">
+                <div className="card  w-full max-w-3xl shadow-2xl bg-neutral-focus">
+                <div className="form-control mt-6">
+                            <button onClick={handleGoogleLogin} className=" py-2 px-6 text-[#fff] font-semibold text-base">Google Login</button>
+                        </div>
                     <form onSubmit={handleLogin} className="card-body w-full ">
                     {
                            errors && <p className="text-lg text-red-900 font-medium">{errors}</p> 
                         }
                         <div className="flex flex-row justify-between">
-                            <div className="w-5/12">
-
+                            <div className="w-full">
                                 <div className="form-control">
                                     <label className="label">
-                                        <span className="label-text">Email</span>
+                                        <span className="label-text text-[#fff]">Email</span>
                                     </label>
                                     <input type="text" name="email" placeholder="Enter email here.." className="input input-bordered" />
-                                </div>
-                                {
+                                    {
                                     emailError && <p className="text-lg text-red-900 font-medium">{emailError}</p>
                                 }
+                                </div>
+                               
 
                                 <div className="form-control">
                                     <label className="label">
-                                        <span className="label-text">Password</span>
+                                        <span className="label-text text-[#fff]">Password</span>
                                     </label>
                                     <input type="password" name="password" placeholder="Enter password here.." className="input input-bordered"  />
 
@@ -97,16 +100,17 @@ const Login = () => {
 
                         </div>
                         <div className="form-control mt-6">
-                            <button onClick={handleGoogleLogin} className="btn ">Google Login</button>
-                        </div>
-                        <div className="form-control mt-6">
-                            <button type="submit" className="btn btn-primary">Add Car</button>
+                        <button type="submit" className="border border-slate-500 py-2 px-6 text-[#fff] font-semibold text-base">Log in</button>
+                        <div className="text-center my-3">
+                           <Link to={'/signup'}><span className="text-[#fff]">Don't  have you any account?</span><button type="submit" className=" py-2 px-6 text-[#fff] font-semibold text-base underline">Signup Now</button></Link>
+                           </div>  
                         </div>
                     </form>
+                    
                 </div>
-                {
+                {/* {
                     user && <p>user:{user.displayName}</p>
-                }
+                } */}
             </div>
         </div>
     );

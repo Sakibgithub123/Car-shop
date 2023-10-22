@@ -4,12 +4,9 @@ import img3 from "../../assets/honda.jpg"
 import img4 from "../../assets/tesla.jpg"
 import img5 from "../../assets/toyoto.jpg"
 import img6 from "../../assets/mecedes.jpg"
-import { Link } from "react-router-dom"
+
 
 const BrandSection = () => {
-  // const {brand_name}=car;
-    
-
     return (
        <div>
          <h1 className="text-5xl font-bold my-10 text-center italic">Our Brands</h1>

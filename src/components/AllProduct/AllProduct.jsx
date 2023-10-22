@@ -1,13 +1,20 @@
 
 import { Link } from "react-router-dom";
 import {  saveCartData } from "../Utility/localStorage";
+import Swal from 'sweetalert2'
 
 const AllProduct = ({ car }) => {
     const { _id, name, brand_name, price, short_description, rating, image } = car;
    
     const handleAddCart = (car) => {
         saveCartData(car._id)
-        alert("cart addedsuccessfully!")
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Added Cart Successfully!',
+            showConfirmButton: false,
+            timer: 1500
+          })
     }
    
     return (

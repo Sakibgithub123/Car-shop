@@ -24,13 +24,13 @@ const router = createBrowserRouter([
   {
     path: "/",
     element:<Root></Root>,
-    loader:()=>fetch('http://localhost:5000/addproducts'),
+    loader:()=>fetch('https://carshop-backend-hl7d45ejr-sakibs-projects-47142987.vercel.app/addproducts'),
     errorElement:<ErrorPage></ErrorPage>,
         children:[
       {
         path:"/",
         element:<Home></Home>,
-        loader:()=>fetch('http://localhost:5000/addproducts')
+        loader:()=>fetch('https://carshop-backend-hl7d45ejr-sakibs-projects-47142987.vercel.app/addproducts')
       },
       {
         path:"/about",
@@ -45,28 +45,28 @@ const router = createBrowserRouter([
       {
         path:"/add-product",
         element:<PrivateRoute><AddProducts></AddProducts></PrivateRoute>,
-        loader:()=>fetch('http://localhost:5000/addproducts')
+        loader:()=>fetch('https://carshop-backend-hl7d45ejr-sakibs-projects-47142987.vercel.app/addproducts')
       },
       {
         path:"/updateCar/:id",
         element:<UpdateCar></UpdateCar>,
-        loader:({params})=>fetch(`http://localhost:5000/addproducts/${params.id}`)
+        loader:({params})=>fetch(`https://carshop-backend-hl7d45ejr-sakibs-projects-47142987.vercel.app/addproducts/${params.id}`)
       },
       {
         path:"/productDetails/:id",
         element:<PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
-        loader:({params})=>fetch(`http://localhost:5000/addproducts/${params.id}`)
+        loader:({params})=>fetch(`https://carshop-backend-hl7d45ejr-sakibs-projects-47142987.vercel.app/addproducts/${params.id}`)
       },
       {
         path:"/brand/:brand_name",
         element:<BrandProduct></BrandProduct>,
-        loader:({params})=>fetch(`http://localhost:5000/addproducts/${params.brand_name}`)
+        loader:({params})=>fetch(`https://carshop-backend-hl7d45ejr-sakibs-projects-47142987.vercel.app/addproducts/${params.brand_name}`)
 
       },
       {
         path:"/cart",
         element:<PrivateRoute><Cart></Cart></PrivateRoute>,
-        loader:()=>fetch('http://localhost:5000/addproducts')
+        loader:()=>fetch('https://carshop-backend-hl7d45ejr-sakibs-projects-47142987.vercel.app/addproducts')
       },
       {
         path:"/signup",
